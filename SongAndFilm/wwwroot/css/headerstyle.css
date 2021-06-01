@@ -1,0 +1,404 @@
+:root {
+    font-size: 62.5%;
+    --bg-body: #eee;
+    --white: rgb(255, 255, 255);
+    --black: black;
+    --darkgrey: #343e3d;
+    --grey-shadow: rgba(37, 40, 43, 0.6);
+    --light-blue: #3abfd9;
+    --footer-sadow: rgb(19, 19, 19);
+    --service-bg-one: rgba(44, 169, 191, 0.6);
+    --service-bg-two: rgba(59, 172, 170, 0.6);
+    --service-bg-three: rgba(48, 155, 179, 0.6);
+    --service-bg-four: rgba(46, 148, 186, 0.6);
+    --service-bg-five: rgba(59, 117, 172, 0.6);
+    --service-bg-carousel: rgba(250, 246, 246, 0.9);
+    --service-bg-banner: rgba(37, 40, 43, 0.6);
+    --bg-card: rgb(227, 242, 245);
+    --color-text-card: #aaa;
+    --clean-blue: rgb(236, 252, 255);
+    --transparent: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-rrss > a {
+    color: var(--black);
+}
+
+.container-header {
+    background: var(--primaryBlue);
+    max-width: 1200px;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+    .container-header > nav {
+        height: 80px;
+        background: var(--white);
+        z-index: 3;
+        position: relative;
+    }
+
+.nav-xbootstrap {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px 0;
+    background: transparent;
+    z-index: 2;
+}
+
+.nav-bg-xbootstrap {
+    z-index: 3;
+}
+
+.iconsize {
+    font-size: 12px;
+    top: 2px;
+    left: 3px;
+}
+
+.nav-xbootstrap ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.nav-xbootstrap > ul {
+    margin: 0;
+}
+
+
+
+.nav-xbootstrap li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    font-size: 14;
+    color: var(--black);
+}
+
+
+    .nav-xbootstrap li a {
+        padding: 15px 20px;
+        font-size: 14px;
+        color: var(--black);
+        display: inline-block;
+        outline: 0;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    .nav-xbootstrap li.active a {
+        background: var(--black);
+        color: var(--white);
+    }
+
+    .nav-xbootstrap li:hover ul.dropdown {
+        display: block;
+    }
+
+    .nav-xbootstrap li ul.dropdown {
+        position: absolute;
+        display: none;
+        width: 200px;
+        background: var(--light-blue);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        -ms-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        -o-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        padding-top: 0;
+    }
+
+        .nav-xbootstrap li ul.dropdown li {
+            display: block;
+            list-style-type: none;
+        }
+
+            .nav-xbootstrap li ul.dropdown li a {
+                padding: 15px 20px;
+                font-size: 14px;
+                color: var(white);
+                display: block;
+                font-weight: 400;
+            }
+
+            .nav-xbootstrap li ul.dropdown li:last-child a {
+                border-bottom: none;
+            }
+
+    .nav-xbootstrap li:hover a {
+        background: var(--black);
+        color: var(--white);
+    }
+
+
+
+        .nav-xbootstrap li:hover a.logo {
+            background: transparent;
+            color: var(--white);
+        }
+
+    .nav-xbootstrap li:first-child:hover a {
+        border-radius: 3px 0 0 3px;
+    }
+
+    .nav-xbootstrap li ul.dropdown li:hover a {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-xbootstrap li ul.dropdown li:first-child:hover a {
+        border-radius: 0;
+    }
+
+    .nav-xbootstrap li:hover .arrow-down {
+        border-top: 5px solid var(--white);
+    }
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #def1f0;
+    position: relative;
+    top: 15px;
+    right: -5px;
+    content: "";
+}
+
+.title-mobile {
+    display: none;
+}
+
+.especial-item {
+    margin-top: 0 !important;
+}
+/*animation*/
+.span1 {
+    top: 10px;
+}
+
+.span2 {
+    top: 5px;
+}
+
+.rotateRight {
+    top: 0;
+    transform: rotate(140deg);
+    transition: 0.5s ease-in-out;
+}
+
+.rotateLeft {
+    transform: rotate(-140deg);
+    transition: 0.5s ease-in-out;
+}
+
+.transparent {
+    background: transparent !important;
+}
+/*media query header*/
+@media only screen and (max-width: 900px) {
+    .especial-item {
+        margin-top: -25px !important;
+    }
+
+    .content {
+        height: 80px;
+    }
+
+    .nav-xbootstrap {
+        background: var(--white);
+        width: 200px;
+        height: 100%;
+        display: block;
+        position: fixed;
+        left: -200px;
+        top: 0px;
+        -webkit-transition: left 0.25s ease;
+        -moz-transition: left 0.25s ease;
+        -ms-transition: left 0.25s ease;
+        -o-transition: left 0.25s ease;
+        transition: left 0.25s ease;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+    }
+
+    .d-nonee {
+        display: none !important;
+    }
+
+    .nav-xbootstrap ul {
+        display: block;
+    }
+
+    .nav-xbootstrap > ul {
+        margin: 30px 0 0;
+    }
+
+    .title-mobile {
+        display: block;
+        top: 15px;
+        left: 100px;
+        right: 100px;
+        font-size: 20px;
+        text-align: center;
+        color: var(--white);
+    }
+
+    .nav-xbootstrap.visible {
+        left: 0px;
+        -webkit-transition: left 0.25s ease;
+        -moz-transition: left 0.25s ease;
+        -ms-transition: left 0.25s ease;
+        -o-transition: left 0.25s ease;
+        transition: left 0.25s ease;
+        background: var(--white);
+    }
+
+    .nav-bg-xbootstrap {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+        height: 80px;
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 12px 0 0 10px;
+    }
+
+    .navbar-xbootstrap {
+        display: inline-block;
+        vertical-align: middle;
+        height: 50px;
+        cursor: pointer;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        padding: 12px;
+    }
+
+        .navbar-xbootstrap span {
+            height: 2px;
+            background: var(--black);
+            margin: 5px;
+            display: block;
+            width: 20px;
+        }
+
+            .navbar-xbootstrap span:nth-child(2) {
+                width: 20px;
+            }
+
+            .navbar-xbootstrap span:nth-child(3) {
+                width: 20px;
+            }
+
+    .nav-xbootstrap ul {
+        padding-top: 50px;
+    }
+
+    .nav-xbootstrap li {
+        display: block;
+    }
+
+        .nav-xbootstrap li a {
+            display: block;
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .nav-xbootstrap li:first-child:hover a {
+            border-radius: 0;
+        }
+
+        .nav-xbootstrap li ul.dropdown {
+            position: relative;
+        }
+
+            .nav-xbootstrap li ul.dropdown li a {
+                background: var(--black) !important;
+                border-bottom: none;
+                color: var(--white) !important;
+            }
+
+        .nav-xbootstrap li:hover a {
+            background: var(--black);
+            color: var(--white) !important;
+        }
+
+        .nav-xbootstrap li ul.dropdown li:hover a {
+            background: var(--service-bg-four) !important;
+        }
+
+        .nav-xbootstrap li a.logo {
+            background-color: transparent !important;
+        }
+
+        .nav-xbootstrap li ul.dropdown li a {
+            padding: 10px 10px 10px 30px;
+        }
+
+    .arrow-down {
+        /* border-top: 5px solid red; */
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
+
+    .cover-bg {
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    .fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .container-header > nav {
+        width: 100vw;
+    }
+
+    .nav-xbootstrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .nav-xbootstrap ul {
+            display: flex;
+            align-items: center;
+        }
+
+    .d-nonee {
+        display: block;
+    }
+}

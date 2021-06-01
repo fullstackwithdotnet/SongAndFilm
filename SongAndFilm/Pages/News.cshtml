@@ -1,0 +1,87 @@
+﻿@page
+@model SongAndFilm.Pages.NewsModel
+@{
+    ViewData["Title"] = "News";
+}
+
+<section class="logo-container-news d-flex justify-content-center border-top position-relative bg-body">
+    <article class="img-container d-lg-none p-4">
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo" class="img-fluid" />
+        </a>
+    </article>
+</section>
+<section class="banner-container-news text-center position-relative mb-4">
+    <div class="banner-content-news d-flex flex-column justify-content-center align-items-center">
+        <h1 class="tittle-news text-uppercase">Latest News</h1>
+    </div>
+</section>
+<section class="card-container container mb-4">
+    <article class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center">
+            <hr class="w-50" />
+        </div>
+    </article>
+    <!--prueba load more-->
+    <article class="card-container container clearfix">
+        <div class="row d-flex flex-wrap justify-content-start">
+
+            @foreach (var item in Model.News)
+            {
+
+
+                <div class="col-xs-12 col-sm-6 col-md-4 blogBox moreBox my-3">
+                    <div class="item shadow-lg bg-body rounded">
+                        <div class="card-placement card p-4">
+                            @{
+                                if (!string.IsNullOrEmpty(item.IFrameEmbed))
+                                {
+                                    @Html.Raw(@item.IFrameEmbed)
+                                }
+                                else if (!string.IsNullOrEmpty(item.ImageUrl))
+                                {
+                                    <img src="@item.ImageUrl"
+                                         class="card-img-top mb-4"
+                                         alt="@item.Title" />
+                                }
+                            }
+
+                            <div class="card-body-placements">
+                                <h2 class="my-4 fs-2">@item.Title</h2>
+                                <p class="card-text mb-4">
+                                    @item.Content
+                                </p>
+                                @*<a href="#" class="card-body-placements mb-4 fs-4">
+                <small class="text-muted">Continue Reading </small>
+                <i class="fas fa-chevron-right mx-2"
+                   style="color: black"
+                   aria-hidden="true"></i>
+            </a>*@
+                            </div>
+                            @*<section class="container">
+            <article class="row mt-4">
+                <div class="profile col-6 col-lg-6 fs-4 p-0">
+                    <i class="fas fa-user mx-2" aria-hidden="true"></i>JZ
+                </div>
+                <div class="profile col-6 col-lg-6 fs-4 p-0">
+                    <i class="fas fa-list-alt mx-2" aria-hidden="true"></i>PLACEMENTS
+                </div>
+                <div class="profile col-12 col-lg-12 fs-4 mt-3">LIKE</div>
+            </article>
+        </section>*@
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+           
+
+            @*<div id="loadMore">
+                <a href="#">Load More</a>
+            </div>*@
+        </div>
+    </article>
+
+    <!-- edn prueba load more-->
+</section>

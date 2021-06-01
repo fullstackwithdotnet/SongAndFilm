@@ -1,0 +1,19 @@
+﻿@using System.Security.Principal
+
+
+@if (User.Identity.IsAuthenticated)
+{
+        <li>
+            Hello @User.Identity.Name!
+        </li>
+        <li>
+            <a asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">Sign out</a>
+        </li>
+}
+else
+{
+        <li>
+            <a  href="/admin/addnews">Admin</a>
+        </li>
+}
+

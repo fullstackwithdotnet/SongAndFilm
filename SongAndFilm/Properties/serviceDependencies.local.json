@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "type": "secrets.user"
+    },
+    "storage1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/bosapplogs",
+      "type": "storage.azure",
+      "connectionId": "BOSAppLogs",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
