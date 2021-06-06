@@ -1,6 +1,8 @@
 ﻿@page
+@using SongAndFilm.Core.Models
 @model SongAndFilm.Pages.Admin.AddNewsModel
 @{
+    ViewBag.Title = "Admin";
 }
 
 
@@ -15,6 +17,7 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Type</th>
                                 <th>Title</th>
                                 <th>Content</th>
                                 <th>Image Url</th>
@@ -26,6 +29,7 @@
                             @foreach (var item in @Model.NewsList)
                             {
                                 <tr>
+                                    <td>@item.NewsType</td>
                                     <td>@item.Title</td>
                                     <td>@item.Content</td>
                                     <td>@item.ImageUrl</td>
@@ -52,6 +56,14 @@
                     <form method="post">
                         <input type="hidden" asp-for="@Model.News.PartitionKey" />
                         <input type="hidden" asp-for="@Model.News.RowKey" />
+                        <div class="form-group">
+                            <label asp-for="@Model.News.NewsType"></label>
+                            <select class="form-control" asp-for="@Model.News.NewsType">
+                                <option value="News">News</option>
+                                <option value="Placement">Placement</option>
+                            </select>
+                            
+                        </div>
                         <div class="form-group">
                             <label asp-for="@Model.News.Title"></label>
                             <input class="form-control" asp-for="@Model.News.Title">

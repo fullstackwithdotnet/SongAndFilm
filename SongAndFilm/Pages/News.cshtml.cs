@@ -29,6 +29,7 @@ namespace SongAndFilm.Pages
         public void OnGet()
         {
             News = _dataService.GetNews();
+            News = News.Where(n => n.NewsType.Equals("News")).ToList();
         }
 
     }

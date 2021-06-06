@@ -45,7 +45,8 @@ namespace SongAndFilm.Persistance
                     Title = news.Title,//"The Little Things",
                     Content = news.Content,
                     ImageUrl = news.ImageUrl,
-                    IFrameEmbed = news.IFrameEmbed
+                    IFrameEmbed = news.IFrameEmbed,
+                    NewsType = news.NewsType
                 };
             }
             else
